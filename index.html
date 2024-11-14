@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Our Virtual Gallery</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+    
+       body{
+        background-image: url(images/bg1.gif);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+       }
+
+
+        .slider-container {
+            max-width: 800px;
+            margin: 50px auto;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid #0b0c0a; 
+            border-radius: 15px; 
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+        }
+        .slide {
+            display: none; 
+            position: relative;
+        }
+        .active {
+            display: block; 
+        }
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            /* background-color: rgba(255, 255, 255, 0.8); */
+            border: none;
+            padding: 10px;
+            border-radius: 50%; /* Circular buttons */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            z-index: 1;
+        }
+        .prev {
+            left: 15px;
+        }
+        .next {
+            right: 15px;
+        }
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+            color: #f70af7; 
+            text-transform: capitalize;
+            font-size: 3rem;
+            font-weight: 900;
+        }
+        p {
+            text-align: center;
+            color: #eff3ee; 
+            font-size: 18px;
+            margin-bottom: 30px;
+            font-weight: bold;
+            font-size: 1.8rem;
+        }
+        .button-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .explore-button {
+            background-color: #b700ff; /* Blue button */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .explore-button:hover {
+            background-color: #b30045; /* Darker blue on hover */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Welcome to Zawiya! 🌈 Experience Comfort - Book Now! 🏡📅</h1>
+    <p>Relax at Seaside Resort 🌊, a beachfront paradise with breathtaking ocean views! Indulge in fresh seafood while enjoying the sun and surf ☀️.</p>
+    
+    <div class="slider-container">
+        <div class="slide active">
+            <img src="images/m1.jpg" alt="Slide 1" style="width:100%; border-radius: 15px 15px 0 0;">
+        </div>
+        <div class="slide">
+            <img src="images/m2.jpg" alt="Slide 2" style="width:100%; border-radius: 15px 15px 0 0;">
+        </div>
+        <div class="slide">
+            <img src="images/m3.jpg" alt="Slide 3" style="width:100%; border-radius: 15px 15px 0 0;">
+        </div>
+        <div class="slide">
+            <img src="images/m4.jpg" alt="Slide 3" style="width:100%; border-radius: 15px 15px 0 0;">
+        </div>
+        <div class="slide">
+            <img src="images/m5.jpg" alt="Slide 3" style="width:100%; border-radius: 15px 15px 0 0;">
+        </div>
+        <div class="slide">
+            <img src="images/m6.webp" alt="Slide 3" style="width:100%; border-radius: 15px 15px 0 0;">
+        </div><div class="slide">
+            <img src="images/m7.avif" alt="Slide 3" style="width:100%; border-radius: 15px 15px 0 0;">
+        </div>
+        <div class="slide">
+            <img src="images/m8.avif" alt="Slide 3" style="width:100%; border-radius: 15px 15px 0 0;">
+        </div>
+        <div class="slide">
+            <img src="images/m3.jpg" alt="Slide 3" style="width:100%; border-radius: 15px 15px 0 0;">
+        </div>
+        <div class="slide">
+            <img src="images/img4.jpg" alt="Slide 3" style="width:100%; border-radius: 15px 15px 0 0;">
+        </div>
+        <div class="slide">
+            <img src="images/img1.jpg" alt="Slide 3" style="width:100%; border-radius: 15px 15px 0 0;">
+        </div>
+        <div class="slide">
+            <img src="images/m8.avif" alt="Slide 3" style="width:100%; border-radius: 15px 15px 0 0;">
+        </div>
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+    </div>
+
+    <div class="button-container">
+        <button class="explore-button" onclick="window.location.href='page.html'">Explore More</button>
+    </div>
+</div>
+
+<script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.remove('active');
+            if (i === index) {
+                slide.classList.add('active');
+            }
+        });
+    }
+
+    function changeSlide(direction) {
+        currentSlide += direction;
+
+        if (currentSlide < 0) {
+            currentSlide = slides.length - 1; // Wrap around to last slide
+        } else if (currentSlide >= slides.length) {
+            currentSlide = 0; // Wrap around to first slide
+        }
+
+        showSlide(currentSlide);
+    }
+
+    // Automatically change slides every 3 seconds
+    setInterval(() => {
+        changeSlide(1);
+    }, 3000);
+
+    // Initially show the first slide
+    showSlide(currentSlide);
+</script>
+
+</body>
+</html>

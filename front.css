@@ -1,0 +1,669 @@
+
+
+body{
+    background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+}
+
+section{
+    padding: 4rem 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.btn{
+    display: block;
+    cursor: pointer;
+    padding: 1rem 3rem;
+    border: var(--border);
+    font-size: 2.8rem;
+    text-align: center;
+    text-transform: capitalize;
+    border-color: aliceblue;
+    /* height: 2rem; */
+    /* width: 10rem; */
+    
+}
+.btn:hover{
+ background-color: rgb(236, 228, 228);
+ border-radius: 5rem;
+
+}
+
+.header{
+    padding-bottom: 2rem;
+    /* background-color: rgb(238, 146, 166); */
+    background-image: linear-gradient(to right, #c1c43b, #a8e063);
+    color:rgb(20, 14, 14);
+    font-size: 4rem;
+    border-radius: 1rem;
+    border-color: rgb(66, 5, 18);
+    border-width: 0.5rem;
+    border-style: solid;
+    width: 70%;
+    margin-left: 20rem;
+    
+}
+
+
+.header .flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+
+}
+/* .header .flex.logo{
+color: rgb(94, 255, 0);
+cursor: pointer;
+color: green
+} */
+
+.header .flex .fas fa-bars{
+    font-size: 3rem;
+    cursor: pointer;
+    display: none;
+    color: var(--sub-color);
+}
+
+.header .flex a{
+    color: rgb(2, 27, 97);
+    font-weight: 1000;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
+
+@keyframes left-right-movement {
+    0%, 100% { transform: translatey(0); }
+    25% { transform: translatey(-5px); }
+    50% { transform: translatey(5px); }
+    75% { transform: translatey(-5px); }
+}
+
+.logo {
+    animation: left-right-movement 1.5s infinite; 
+}
+
+
+
+.header .navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    background-color: var(--sub-color);
+    padding: .5rem 2rem;
+    border-radius: .5rem;
+
+}
+
+.header .navbar a{
+    font-size: 3rem;
+    color: var(--main-color);
+    padding: 1rem 3rem;
+    border-radius: -5rem;
+
+}
+
+.header .navbar a:hover{
+    /* background-color:palevioletred */
+    color: rgb(7, 63, 245)
+}
+
+
+.home .box img{
+    border-radius: 15px;
+    height: 60vh;
+    width: 90%;
+    object-fit: cover;
+    margin-bottom:1rem ;
+    border-color: rgb(31, 1, 15);
+    border-style: solid;
+    border-width: 2rem;
+
+}
+
+.home .box #btn{
+    font-size: 0px;
+    border-color: rgb(213, 224, 233);
+    border-width: 20px; 
+} 
+
+.home .box .flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+
+}
+
+.home .box .flex h3{
+  font-size: 2.5rem;
+  color: aliceblue;
+  text-transform: capitalize;
+}
+
+ .swiper-button-prev{
+    left:  0%;
+}
+
+.swiper-button-next{
+right: 0%;  
+
+}
+
+.swiper-button-next,
+.swiper-button-prev{
+    padding: 2rem 1rem;
+    background-color: rgb(3, 17, 17);
+    font-size: 2rem;
+    top: 40%;
+    opacity: 1.5;
+    /* margin-right: -9rem;      for button adjesment */
+
+
+}
+
+
+.swiper-button-next::after,
+.swiper-button-prev::after{
+    font-size: 2rem;
+    color: rgb(127, 129, 255);
+
+}
+
+.swiper-button-next::hover,
+.swiper-button-next::hover{
+    opacity: 1.8;
+}
+
+ /* header ke liye  */
+.header .flex .btn{
+    display: none;
+
+}
+
+.header .navbar{
+    flex-flow: column;
+    padding: 2rem;
+    display: none;
+}
+
+.header .navbar.active{
+    display: flex;
+}
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* reservation form ke liye */
+
+.reservation .flex{
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.reservation form{
+    border: rgb(27, 18, 18);
+    padding: 2rem;
+    border-color: white;
+    color:rgb(37, 64, 139);
+    background-color:rgb(58, 10, 10);
+    /* opacity: 0.7; */
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+    
+
+    
+}
+
+
+.reservation form .flex{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    
+}
+
+.reservation form h3{
+    background-color: rgb(241, 232, 241);
+    color: rgb(10, 10, 10);
+    font-size: 2.8rem;
+    margin-bottom: 2rem;
+    border-radius: .5rem;
+    padding: 1.4rem;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+
+.reservation form .flex .box{
+    flex: 1 1 40rem;
+    /* padding: 1rem 0;
+    margin: 1rem 0;
+    border-bottom: var(--border);
+    background-color: var(--main-color);
+    color: var(--white);
+    font-size: 1.8rem; */
+}
+
+
+.reservation form .flex .box p{
+    font-size: 2.1rem;
+    color: rgb(159, 201, 238);
+}
+
+.reservation form .flex .box .input{
+    padding: 1rem 0;
+    margin: 1rem 0;
+    border-bottom: var(--border);
+    background-color: var(--main-color);
+    color: var(--white);
+    font-size: 1.8rem;
+    width: 100%;
+}
+
+
+
+.reservation form .flex .box input [type="date"]::-webkit-calendar-picker-indicator {
+
+    filter: invert(1);
+    }
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+.about .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.about .row .image{
+    flex: 1 1 40rem;
+  border-radius: 5rem;
+}
+
+.about .row .image img{
+    width: 40rem;
+
+}
+
+.about .row .content{
+    float: 1 1 40rem;
+}
+
+.about .row .content h3{
+ font-size: 3.5rem;
+ color: papayawhip;
+ text-transform:capitalize ;
+ margin-bottom: 1rem;
+}
+
+.about .row .content p{
+    line-height: 2;
+    padding: 1rem 0;
+    font-size: 2.5rem;
+    color: rgb(232, 241, 230);
+}
+
+
+.about .row .revers{
+    flex-flow: row-reverse;
+    margin: 3rem 0;
+    flex-wrap:wrap;
+}
+
+.about .row .content a{
+    color: aliceblue;
+    /* height: 5rem; */
+    /* width: 20rem; */
+    /* text-align: center;
+    justify-content: center;
+    align-items: center; */
+}
+
+.about .row .content a:hover{
+    background-color: chartreuse;
+    color: black;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+       
+}
+
+.services .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(25rem,1fr));
+    gap:1.5rem;
+    justify-content: center;
+    align-items:flex-start;
+}
+
+.services .box-container .box{
+    padding: 2rem;
+    text-align: center;
+}
+
+.services .box-container .box img{
+    height: 15rem;
+    margin-bottom: 1rem;
+    border-radius: 9rem;
+    border-color: black;
+    border-width: 0.8rem;
+    border-style: solid;
+}
+
+.services .box-container .box h3{
+    font-size: 2.5rem;
+    color: rgb(5, 5, 247);
+    text-transform: capitalize;
+
+}
+
+.services .box-container .box p{
+    line-height: 2;
+    font-size: 1.7rem;
+    color: rgb(8, 8, 8);
+
+}
+
+
+.mySwiper img{
+        height: 60vh;
+        width: 90%;
+        border-radius: 2rem;
+        border-color: rgb(118, 226, 11);
+        border-width: 3rem;
+        object-fit: cover;
+        margin-bottom: 4rem;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+.mySwiper swiper-button-next{
+    margin-left: 25px;
+
+}
+
+
+/* .swiper-pagination-bullets{
+    background-color: rgb(241, 237, 238);
+    width: 70%; */
+/* } */
+
+.swiper-pagination-bullets-active{
+    background-color: rgb(229, 238, 238);
+    width: 80%;
+}
+
+.swiper-button-prev,
+.swiper-button-next{
+    padding: 2rem 1rem;
+    background-color: rgb(3, 17, 17);
+    font-size: 2rem;
+    top: 40%;
+    margin-right: 23rem;      /* for button adjesment */
+}
+
+.swiper-button-prev{
+    left:  0%;
+    opacity: 1.5;
+}
+
+.swiper-button-next{
+right: -12%;
+opacity: 1.5;
+}
+
+
+
+/* contect section start */
+
+.contect .row{
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    flex-wrap: wrap;
+    width: 80%;
+
+}
+
+.contect .row form {
+  flex: 1 1 40rem;
+  border: gold;
+  border-radius: .5rem;
+  padding: 2rem;
+  text-align: center;
+  background-color: rgb(37, 48, 59);
+  border-width: 5px;
+}
+
+
+.contect .row  h3{
+    margin-bottom: 1rem;
+    border-radius: .5rem;
+    padding: 1.3rem;
+    color: rgb(214, 193, 193);
+    font-size: 3.5rem;
+    text-transform: capitalize;
+}
+
+
+/* 
+.contect .row .faq{
+    flex: 1 1 40rem ;
+    font-size: 2rem;
+} */
+
+
+.contect .row .box{
+    padding: 1rem 0;
+    margin: 1rem 0;
+    border-bottom: black;
+    font-size: 1.8rem;
+    color: rgb(8, 7, 8);
+    background: rgb(228, 213, 218);
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.contect .row form .box::placeholder{
+    color: rgb(121, 134, 134);
+}
+
+
+.contect .row form textarea{
+    height: 15rem;
+    resize: none;
+}
+
+
+.reviews {
+    padding-top: 0;
+}
+
+.reviews .reviews-slider{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(25rem,1fr));
+
+}
+
+.reviews .box {
+    display: grid; 
+    justify-content: center; 
+    flex-wrap: nowrap; 
+    gap: 1rem; 
+}
+
+.reviews .box img {
+    display: grid;
+    height: 12rem;
+    width: 11rem;
+    border-radius: 20%;
+    object-fit: cover;
+}
+
+
+.reviews .box h3{
+    margin: 1rem 0;
+    font-size:3rem ;
+    color: rgb(250, 226, 9);
+    text-transform: capitalize;
+
+}
+
+.reviews .box p{
+    line-height: 2;
+    font-size: 2.1rem;
+    color: aliceblue;
+    margin-bottom: 3rem;
+}
+
+
+
+
+.footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(25rem,1fr));
+    gap:1.5rem;
+    justify-content: center;
+    align-items:flex-start;
+    padding-bottom: 2rem;
+    background-color: rgb(27, 2, 21);
+    border-radius: 1rem;
+   
+}
+
+
+.footer .box-container .box a{
+  display:block;
+  font-size: 1.8rem;
+  color: rgb(219, 224, 238);
+  padding: 1rem 0;
+  font-size: 2rem;
+}
+
+
+.footer .credit{
+    font-size: 2rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: gray;
+    border-radius: 0.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* responsive */
+
+@media(max-width:991px){
+    html{
+        font-size: 55%;
+    }
+    .header{
+        width: 80%;
+        font-size: 3rem;
+        margin-left: 5rem;
+
+    }
+
+    .header .flex .fas fa-bars{
+        display: inline-block
+    }
+    .header .flex .btn{
+        display: inline-block
+    }
+}
+
+@media(max-width:768px){
+    .header .flex .fas fa-bars{
+        display: inline-block
+    }
+
+@media(max-width:768px){
+    .home .box img{
+        height: 40vh;
+    }
+    .swiper-button-next,
+    .swiper-button-prev{
+    top: 35%;
+}
+.header{
+    width: 80%;
+    font-size: 3rem;
+    margin-left: 5rem;
+
+}
+}
+}
+
+@media(max-width:450px){
+    html{
+        font-size: 50%;
+    }
+
+    .header{
+        width: 30rem;
+        margin-left: auto;
+
+    }
+.header .flex .logo{
+    font-size: 2rem;
+}
+
+.home .box img{
+    height: 30rem;
+}
+about .row .image img{
+    width: 100%;
+}
+.contect .row .box{
+    width: 30rem;
+    margin-left: auto;
+
+}
+
+.swiper-button-next,
+.swiper-button-prev{
+    margin-right: 3.6rem;      /* for button adjesment */
+
+}
+
+}
+
+
